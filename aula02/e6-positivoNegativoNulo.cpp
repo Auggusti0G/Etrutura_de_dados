@@ -1,54 +1,54 @@
-/*               Comentário de várias linhas.
-  CEUB  -  FATECS  -  ADS  -  Programação  -  Prof. Barbosa
+/*               ComentÃ¡rio de vÃ¡rias linhas.
+  CEUB  -  FATECS  -  ADS  -  ProgramaÃ§Ã£o  -  Prof. Barbosa
 
 - Problema:
 
-- Elabore o programa que leia um número qualquer e verifique 
-se ele é positivo, nulo ou negativo.
+- Elabore o programa que leia um nÃºmero qualquer e verifique 
+se ele Ã© positivo, nulo ou negativo.
 
-Teste 1: Entrada: numero = 4       	Saída: Número Positivo
-Teste 2: Entrada: numero = 0        Saída: Número Nulo
-Teste 3: Entrada: numero = -4       Saída: Número Negativo
+Teste 1: Entrada: numero = 4       	SaÃ­da: NÃºmero Positivo
+Teste 2: Entrada: numero = 0        SaÃ­da: NÃºmero Nulo
+Teste 3: Entrada: numero = -4       SaÃ­da: NÃºmero Negativo
 
 - Passos para resolver o problema (algoritmo):
 Entrada de dados (leia)
 Testes (se ...)
-Saída de dados (escreva)								
+SaÃ­da de dados (escreva)								
 */
 
 #include <stdio.h>		        		// printf, scanf (biblioteca)
 int main () {     
-  float numero;               		// Declara variável real
+  float numero;               		// Declara variÃ¡vel real
   printf("Digite o numero: ");
   scanf("%f", &numero);           // leia (numero);
-  if (numero > 0)                 // se (numero > 0) então
-    printf("\nNumero positivo."); //    escreva (" … ");
-  else if (numero < 0)            // senão se (numero < 0) então
-    printf("\nNumero negativo."); //    escreva (" … ");
-  else                            // senão
-    printf("\nNumero nulo.");     //    escreva (" … ");
+  if (numero > 0)                 // se (numero > 0) entÃ£o
+    printf("\nNumero positivo."); //    escreva (" â€¦ ");
+  else if (numero < 0)            // senÃ£o se (numero < 0) entÃ£o
+    printf("\nNumero negativo."); //    escreva (" â€¦ ");
+  else                            // senÃ£o
+    printf("\nNumero nulo.");     //    escreva (" â€¦ ");
 } 
-/* --- Alterações:
-a. Além da mensagem, mostre também o número digitado pelo usuário.
-b. Se o número for positivo, mostre a mensagem, o valor da variável 
+/* --- AlteraÃ§Ãµes:
+a. AlÃ©m da mensagem, mostre tambÃ©m o nÃºmero digitado pelo usuÃ¡rio.
+b. Se o nÃºmero for positivo, mostre a mensagem, o valor da variÃ¡vel 
    numero e o dobro;
-   Se negativo, mostre a mensagem, o valor da variável numero e o triplo;
-c. Altere o tipo da variável numero para inteiro (int). 
-   Se nulo, mostre a mensagem, o valor da variável numero.
+   Se negativo, mostre a mensagem, o valor da variÃ¡vel numero e o triplo;
+c. Altere o tipo da variÃ¡vel numero para inteiro (int). 
+   Se nulo, mostre a mensagem, o valor da variÃ¡vel numero.
    --- DICAS:
    printf ("Valor digitado %f", numero);															// a.
-   if ( numero > 0 ) {                 // se ( numero > 0 ) então			// b.
-     printf ("\nNumero positivo.");    //    escreva (" … ");
+   if ( numero > 0 ) {                 // se ( numero > 0 ) entÃ£o			// b.
+     printf ("\nNumero positivo.");    //    escreva (" â€¦ ");
      printf ("\nValor digitado %d", numero);
      printf ("\nDobro %f", numero * 2);
    {
-   else if ( numero < 0 ) {            //    se ( numero < 0 ) então
-     printf ("\nNumero negativo.");  //    escreva (" … ");
+   else if ( numero < 0 ) {            //    se ( numero < 0 ) entÃ£o
+     printf ("\nNumero negativo.");  //    escreva (" â€¦ ");
      printf ("\nValor digitado %f", numero);
      printf ("\nTriplo %f", numero * 3);
    }
-   else {                            //    senão
-     printf ("\nNumero nulo.");      //       escreva (" … ");
+   else {                            //    senÃ£o
+     printf ("\nNumero nulo.");      //       escreva (" â€¦ ");
      printf ("\nValor digitado %f", numero);
    }
    int numero;																												// c.
@@ -58,18 +58,42 @@ c. Altere o tipo da variável numero para inteiro (int).
 
 - Algoritmo:
 
-início // Verificar se o número lido é positivo, negativo ou nulo.
+inÃ­cio // Verificar se o nÃºmero lido Ã© positivo, negativo ou nulo.
 	real : numero;
 	leia ( numero );
-	se ( numero > 0 ) então
+	se ( numero > 0 ) entÃ£o
 		escreva ("Valor positivo");
-	senão
-		se ( numero < 0 ) então
+	senÃ£o
+		se ( numero < 0 ) entÃ£o
 			escreva ("Valor negativo");
-		senão
+		senÃ£o
 			escreva ("Valor nulo");
 		fimse;
 	fimse;
 fim.     
 
 */
+
+// AUTERAÃ‡Ã•ES
+
+int main(){
+	
+	float numero ;
+	
+	printf("Digite o  nuemro:");
+	scanf("%f", &numero);
+	
+	if (numero > 0){
+		printf("o numero e positivo e seu dobro sera %f\n\n", numero * 2);
+	}
+	else if (numero < 0){
+		printf("O numero e negativoo triplo ser %f\n\n", numero * 3);
+	}
+	else{
+		printf("numero  nulo");
+	}
+	printf("%f\n", numero);
+	printf("dobro %f ",numero * 2);
+	
+
+}
