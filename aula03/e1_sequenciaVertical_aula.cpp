@@ -1,20 +1,20 @@
-/*             Comentários de várias linhas.
-  CEUB  -  FATECS  -  ADS  -  Programação  -  Prof. Barbosa
+/*             ComentÃ¡rios de vÃ¡rias linhas.
+  CEUB  -  FATECS  -  ADS  -  ProgramaÃ§Ã£o  -  Prof. Barbosa
 
 - Problema:
 
-- Elabore o programa que gere a sequência dos números naturais até 10
+- Elabore o programa que gere a sequÃªncia dos nÃºmeros naturais atÃ© 10
 na vertical.
 
 - Passos para resolver o problema (algoritmo):
-declara as variáveis
-mostra cabeçalho
-estrutura de repetição de 0 até 10 de 1 em 1:
-    mostra variável do for
+declara as variÃ¡veis
+mostra cabeÃ§alho
+estrutura de repetiÃ§Ã£o de 0 atÃ© 10 de 1 em 1:
+    mostra variÃ¡vel do for
 mostra mensagem
 
-- Tela de saída:
-Números naturais na vertical:
+- Tela de saÃ­da:
+NÃºmeros naturais na vertical:
   0
   1
   2 
@@ -27,19 +27,19 @@ Encerrou o programa.
 #include <stdio.h>  // printf, puts, scanf (Bibliotecas)
 int main () {                   
   int i;            // Intervalo de -2.147.483.648 a 2.147.483.647.
-  printf("Numeros naturais na vertical:");  // Cabeçalho.
-  for (i = 0; i <= 10; i ++)     // para i de 0 até 10 passo 1 faça
+  printf("Numeros naturais na vertical:");  // CabeÃ§alho.
+  for (i = 0; i <= 10; i ++)     // para i de 0 atÃ© 10 passo 1 faÃ§a
   // for(i = 0; i <= 10; i += 1) // Outra maneira de usar o passo 1.
-  {	                             // %3d  Mostra os números na coluna 3.
-    printf("\n%3d", i);          // \n Avança pro início da próxima linha
+  {	                             // %3d  Mostra os nÃºmeros na coluna 3.
+    printf("\n%3d", i);          // \n AvanÃ§a pro inÃ­cio da prÃ³xima linha
   }                              // fimpara;
   printf("\nEncerrou o programa.");
 } 
-/* --- Alterações:
+/* --- AlteraÃ§Ãµes:
 a. Este programa tem quantas chaves opcionais?
-b. Mostre a sequência (os números) na coluna 15 da tela. 
-c. No final, mostre a quantidade de números da sequência. Use contador. 
-   Saída:  Quantidade: 11
+b. Mostre a sequÃªncia (os nÃºmeros) na coluna 15 da tela. 
+c. No final, mostre a quantidade de nÃºmeros da sequÃªncia. Use contador. 
+   SaÃ­da:  Quantidade: 11
 
 	--- DICAS:
 Tem duas chaves opcionais.          								// a.
@@ -49,3 +49,21 @@ ct++;													// Dentro do for
 printf("Quantidade: %d", ct);	// Depois do for
 
 */
+
+#include <stdio.h>
+
+int main() {
+	int i ;
+	int qnt = 11;
+	int contador = 0 ;
+	
+	printf("Numeros naturais na vertical:\n\n");
+	
+	for(i = 0 ; i < qnt ; i++){
+		printf("%d\n",i);
+		
+		contador++;
+		}
+	printf("\n%d", contador );
+	
+}
