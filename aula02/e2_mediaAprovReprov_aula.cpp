@@ -72,7 +72,10 @@ Retire o segundo \n deste comando: 														// d.
    scanf ("%f", & peso2);          
    media = (prova1 * peso1 + prova2 * peso2) / (peso1 + peso2);
 */
- codigo com todas as auteraç~oes
+
+
+//codigo com todas as auteraçoes
+
 #include <stdio.h>
 int main(){
 	
