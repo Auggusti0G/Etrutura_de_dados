@@ -1,26 +1,26 @@
-/*               Comentário de várias linhas.
-  CEUB  -  FATECS  -  ADS  -  Programação  -  Prof. Barbosa
+/*               ComentÃ¡rio de vÃ¡rias linhas.
+  CEUB  -  FATECS  -  ADS  -  ProgramaÃ§Ã£o  -  Prof. Barbosa
 
 - Problema:
 
-- Desenvolva o programa que leia vários números digitados pelo 
-usuário e use o valor -1 como condição de saída (flag) da 
-estrutura de repetição. Na tela de saída, mostre a quantidade 
-de números digitados.				
+- Desenvolva o programa que leia vÃ¡rios nÃºmeros digitados pelo 
+usuÃ¡rio e use o valor -1 como condiÃ§Ã£o de saÃ­da (flag) da 
+estrutura de repetiÃ§Ã£o. Na tela de saÃ­da, mostre a quantidade 
+de nÃºmeros digitados.				
 
 - Passos para resolver o problema (algoritmo):
 
-declara as variáveis
-inicia a variável 
-estrutura de repetição
-    lê número
-    testa condição saída
+declara as variÃ¡veis
+inicia a variÃ¡vel 
+estrutura de repetiÃ§Ã£o
+    lÃª nÃºmero
+    testa condiÃ§Ã£o saÃ­da
     contador
-tela de saída               		
+tela de saÃ­da               		
 
-Teste 1: Entrada: 5, 6 e -1       Saída: Quantidade de números: 2
-Teste 2: Entrada: 5, 6, 7 e -1    Saída: Quantidade de números: 3
-Teste 3: Entrada: 5, 6, 6, 7 e -1 Saída: Quantidade de números: 4 	 
+Teste 1: Entrada: 5, 6 e -1       SaÃ­da: Quantidade de nÃºmeros: 2
+Teste 2: Entrada: 5, 6, 7 e -1    SaÃ­da: Quantidade de nÃºmeros: 3
+Teste 3: Entrada: 5, 6, 6, 7 e -1 SaÃ­da: Quantidade de nÃºmeros: 4 	 
 
 */
 
@@ -28,26 +28,26 @@ Teste 3: Entrada: 5, 6, 6, 7 e -1 Saída: Quantidade de números: 4
 int main () {
   int ct;        // Intervalo: de -2.147.483.648 a 2.147.483.647 (int)
   float numero;  // Intervalo: de 3.4E-38 a 3.4E+38 (real)
-  ct = 0;        // Inicia a variável.
+  ct = 0;        // Inicia a variÃ¡vel.
   printf("Digite [-1] pra sair da repeticao\n"); 
-  while (true) {    			// enquanto (verdade) faça
+  while (true) {    			// enquanto (verdade) faÃ§a
 	  printf("Numero: ");
 	  scanf("%f", &numero); // leia (numero);    
-    if (numero == -1){		// -1, a condição de saída
-      break;							// Sai de uma estrutura de repetição
+    if (numero == -1){		// -1, a condiÃ§Ã£o de saÃ­da
+      break;							// Sai de uma estrutura de repetiÃ§Ã£o
 		}
     ct ++;                // ct = ct + 1; ou ct += 1; (Contador)
   }                       // Fim do while   // fimenquanto
   printf("\n\aQuantidade de numeros: %d", ct); // \a Sinal sonoro(beep)
 } 
-/* --- ALTERAÇÕES:
+/* --- ALTERAÃ‡Ã•ES:
 a. Este programa tem quantas chaves opcionais?
-b. Na tela de saída, acrescente a soma dos valores digitados.       
-   Teste 4: Entrada: 5, 6 e -1       Saída: Quantidade de números= 2 
+b. Na tela de saÃ­da, acrescente a soma dos valores digitados.       
+   Teste 4: Entrada: 5, 6 e -1       SaÃ­da: Quantidade de nÃºmeros= 2 
                                            Soma= 11                                                                                 
 c. Mostre a soma com duas casa digital.
-d. Calcule a média dos valores digitados.
-e. Limpe a tela, antes de mostrar a tela de saída.
+d. Calcule a mÃ©dia dos valores digitados.
+e. Limpe a tela, antes de mostrar a tela de saÃ­da.
 
 	 --- DICAS:
 Tem duas chaves opcionais no if.														// a.
@@ -57,33 +57,68 @@ Tem duas chaves opcionais no if.														// a.
   printf("\nSoma= %f", soma);	 		          // Depois do while
   printf("\nSoma= %.2f", soma); 	// Depois do while				// c.
   media = soma /ct;								// Depois do while				// d.
-  printf(\nMédia= %.2f", media);	// Depois do while
+  printf(\nMÃ©dia= %.2f", media);	// Depois do while
 #include <stdlib.h>      // system       										// e.
   system ("cls");        // Limpa a tela.
 
 ---	   
 
-// - Versão sem break:
+// - VersÃ£o sem break:
 # include <stdio.h>            // printf, scanf (Bibliotecas)
 int main ( ) {                 
   int ct;          // Intervalo: de -2.147.483.648 a 2.147.483.647 (int)
   float nota, soma, media;     // Intervalo: de 3.4E-38 a 3.4E+38 (real)
-  ct = 0;                      // Inicializa as variáveis.
+  ct = 0;                      // Inicializa as variÃ¡veis.
   soma = 0;
-  printf("Digite [-1] pra sair da repeticao\n"); // -1, condição de saída.
+  printf("Digite [-1] pra sair da repeticao\n"); // -1, condiÃ§Ã£o de saÃ­da.
   printf ("Nota do aluno: ");
-  scanf ("%f", & nota);        // leia (nota);// Lê somente a primeira nota.
-  while (nota != -1) {       // enquanto ( nota <> -1 ) faça
+  scanf ("%f", & nota);        // leia (nota);// LÃª somente a primeira nota.
+  while (nota != -1) {       // enquanto ( nota <> -1 ) faÃ§a
     ct ++;                     // ct = ct + 1;         ( Contador ) 
     soma += nota;              // soma = soma + nota;  ( Somador  )
     printf ("Nota do aluno: ");
-    scanf ("%f", & nota);// scanf é sempre o último comando dentro do while
+    scanf ("%f", & nota);// scanf Ã© sempre o Ãºltimo comando dentro do while
   }          // Fim do while   // fimenquanto
-  if ( ct != 0 ) {       // Teste obrigatório, evita erro divisão por zero.
-    media = soma / ct;                             // Tela de saída.
+  if ( ct != 0 ) {       // Teste obrigatÃ³rio, evita erro divisÃ£o por zero.
+    media = soma / ct;                             // Tela de saÃ­da.
     printf ("\n\aQuantidade de alunos: %d", ct);//\a  sinal sonoro (beep)
 	printf ("\nMedia da turma: %.1f", media);  // Mostra com uma casa decimal.
   }       
 }
 
 */
+
+//---------------------------------------------------------------------------
+
+// AUTERAÃ‡Ã•ES 
+
+
+#include <stdio.h>
+
+int main(){
+	
+	int contador = 0;
+	float numeros;
+	int soma = 0 ;
+	float media ;
+	
+	
+	while(true){
+		printf("Digite os num :\n");
+		scanf("%f", &numeros);
+		
+		if (numeros == 0){
+			break;
+		}
+		contador ++ ;
+		soma += numeros;
+	}
+	
+	media = (soma) / (contador);
+	
+	
+	printf("\n%d\n\n", contador);
+	printf("%d\n\n", soma);
+	
+	printf("Valor da media %f", media);
+}
