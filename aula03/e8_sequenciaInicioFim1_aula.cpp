@@ -1,14 +1,14 @@
-/*            Comentários de várias linhas.
-  CEUB  -  FATECS  -  ADS  -  Programação  -  Prof. Barbosa
+/*            ComentÃ¡rios de vÃ¡rias linhas.
+  CEUB  -  FATECS  -  ADS  -  ProgramaÃ§Ã£o  -  Prof. Barbosa
 
 - Problema:
 
-- Elabore o programa que gere a sequência dos números inteiros de um
-em um, onde o usuário fornecerá os valores inicial e final da sequência.
+- Elabore o programa que gere a sequÃªncia dos nÃºmeros inteiros de um
+em um, onde o usuÃ¡rio fornecerÃ¡ os valores inicial e final da sequÃªncia.
 
 - Passos para resolver do problema (algoritmo):
-lê primeiro;
-lê ultimo;
+lÃª primeiro;
+lÃª ultimo;
 for (...){
     escreva;
 }
@@ -16,7 +16,7 @@ for (...){
 - Teste 1:
 - Entrada: Primeiro: x
            Ultimo: y
-- Saída:
+- SaÃ­da:
 Sequencia de numeros:
 x  x+1  x+2  ...  y
 Encerrou a repeticao.                   							*/
@@ -30,21 +30,21 @@ int main () {
   scanf("%d", &ultimo);           // leia (ultimo);
   printf("\nSequencia de numeros:\n");
   for(i=primeiro; i<=ultimo; i++) // for(i=primeiro; i<=ultimo; i=i+1)
-  {                               // Início da estrutura de repetição for
-    printf("%3d", i);             // %3d define o espaço entre os números
-  }                               // Fim da estrutura de repetição for.
+  {                               // InÃ­cio da estrutura de repetiÃ§Ã£o for
+    printf("%3d", i);             // %3d define o espaÃ§o entre os nÃºmeros
+  }                               // Fim da estrutura de repetiÃ§Ã£o for.
 } 
-/* --- Alterações:
+/* --- AlteraÃ§Ãµes:
 a. Este programa tem quantas chaves opcionais?
-b. Mostre a quantidade de números gerados na sequência. 
-c. Mostre a soma dos números gerados na sequência. 
-d. Mostre a média aritmética dos números gerados na sequência.  
-e. Mostre o produto dos números gerados na sequência. 
+b. Mostre a quantidade de nÃºmeros gerados na sequÃªncia. 
+c. Mostre a soma dos nÃºmeros gerados na sequÃªncia. 
+d. Mostre a mÃ©dia aritmÃ©tica dos nÃºmeros gerados na sequÃªncia.  
+e. Mostre o produto dos nÃºmeros gerados na sequÃªncia. 
 	 --- DICAS:
 Tem duas chaves opcionais.																	// a.
 Contador: ct ++;    // ct = ct + 1 (Dentro do for)					// b.
 Somador: soma += i; // soma = soma + i (Dentro do for) 			// c.
-  float media;      // Variável tipo float									// d.
+  float media;      // VariÃ¡vel tipo float									// d.
    if (ct > 0) {    // Depois do for. Calcula somente 1 vez
      media = (float) soma / ct;    
      printf ("Media; %.2f", media);
@@ -53,4 +53,36 @@ Somador: soma += i; // soma = soma + i (Dentro do for) 			// c.
     produto *= i;   // produto = produto * i;  // Dentro do for
 
 */
+
+#include <stdio.h>
+int main(){
+	
+	int i , contador = 0 , somador = 0 ;
+	int prim , ulti ;
+	float media ;
+	double produto = 1;
+	
+	printf("Digite o primeiro numero:\n\n");
+	scanf("%d", &prim);
+	
+	printf("\nDigite o ultimo numero:\n\n");
+	scanf("%d", &ulti);
+	
+	printf("\nOs numeros da segyeuncia serao:\n\n");
+	for( i = prim ; i <= ulti ; i++){
+		printf("\t%d",i);
+		
+		
+		contador ++;
+		somador += i ;
+		produto *= i;
+	}
+	printf("\n");
+	media = somador / contador ;
+	printf("\nA media dos valores da seguencia foi : %f\n\n", media);
+	printf("A quantidade de numeros foi : %d\n\n", contador);
+	printf("A soma de todosos valores sera : %d\n\n", somador);
+	printf("o produto da seguencia sera %g", produto);
+	
+}
 
