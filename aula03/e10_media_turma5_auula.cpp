@@ -1,33 +1,33 @@
-/*            	Coment·rios de v·rias linhas.
-  CEUB  -  FATECS  -  ADS  -  ProgramaÁ„o  -  Prof. Barbosa
+/*            	Coment√°rios de v√°rias linhas.
+  CEUB  -  FATECS  -  ADS  -  Programa√ß√£o  -  Prof. Barbosa
 
 - Problema:
 
-- Implemente o programa que calcula a mÈdia aritmÈtica de uma turma com
-cinquenta alunos. Onde cada aluno realizou uma avaliaÁ„o. O usu·rio vai
-digitar a nota dos alunos. Resolva com a estrutura de repetiÁ„o for.
+- Implemente o programa que calcula a m√©dia aritm√©tica de uma turma com
+cinquenta alunos. Onde cada aluno realizou uma avalia√ß√£o. O usu√°rio vai
+digitar a nota dos alunos. Resolva com a estrutura de repeti√ß√£o for.
 Obs.: facilite os testes no desenvolvimento, troque o valor cinquenta por cinco.
 
-  Esse problema j· foi resolvido com a estrutura de repetiÁ„o while, agora,
-vamos faze com a estrutura de repetiÁ„o for (loop - laÁo).
+  Esse problema j√° foi resolvido com a estrutura de repeti√ß√£o while, agora,
+vamos faze com a estrutura de repeti√ß√£o for (loop - la√ßo).
 
 - Passos para resolver o problema (algoritmo):
 
-declara as vari·veis
-inicia as vari·veis         // Antes do for, na coluna 1
-for (num = v_inicial, num < v_final, num++): // Controla quantas repetiÁıes
-    le nota                 // IndentaÁ„o
+declara as vari√°veis
+inicia as vari√°veis         // Antes do for, na coluna 1
+for (num = v_inicial, num < v_final, num++): // Controla quantas repeti√ß√µes
+    le nota                 // Indenta√ß√£o
     contador
     somador
-    // Fim da repetiÁ„o
-calcula mÈdia               // Depois do for, na coluna 1
-mostra mÈdia
+    // Fim da repeti√ß√£o
+calcula m√©dia               // Depois do for, na coluna 1
+mostra m√©dia
 
-- FÛrmula de mÈdia aritmÈtica: 			media = ____soma____	(numerador)
+- F√≥rmula de m√©dia aritm√©tica: 			media = ____soma____	(numerador)
 						 			 												   quantidade		(denominador)
 
-Teste 1:    Entrada: nota: 2, 4, 6, 8, 10      SaÌda: MÈdia da turma = 6
-Teste 2:    Entrada: nota: 3, 4, 6, 8, 10      SaÌda: MÈdia da turma = 6.2 
+Teste 1:    Entrada: nota: 2, 4, 6, 8, 10      Sa√≠da: M√©dia da turma = 6
+Teste 2:    Entrada: nota: 3, 4, 6, 8, 10      Sa√≠da: M√©dia da turma = 6.2 
 */
 
 #include <stdio.h>    // printf, puts, scanf (Bibliotecas)
@@ -36,30 +36,67 @@ int main ( ) {
   float nota, soma, media;
 	ct = 0;             // Inicia o contador
 	soma = 0;           // Inicia o somador
-  // ct = soma = 0;		// Inicia as duas vari·veis com zero na mesma linha
-  for (num = 1 ; num < 6 ; num ++) { // InÌcio da estrutura de repetiÁ„o
-    printf ("Nota do aluno: ");  // Mensagem est·tica.
+  // ct = soma = 0;		// Inicia as duas vari√°veis com zero na mesma linha
+  for (num = 1 ; num < 6 ; num ++) { // In√≠cio da estrutura de repeti√ß√£o
+    printf ("Nota do aluno: ");  // Mensagem est√°tica.
     scanf ("%f", &nota);         // leia (nota);
     ct = ct + 1;	               // ct += 1 	// ct ++; (contador)
     soma = soma + nota;          // soma += nota; (somador ou acumulador)
   }
   media = soma / ct;
-  printf("\nMedia da turma = %f", media);   // Tela de saÌda.
+  printf("\nMedia da turma = %f", media);   // Tela de sa√≠da.
 } 
-/* --- AlteraÁıes:
+/* --- Altera√ß√µes:
 a. Este programa tem quantas chaves opcionais?
-b. Mostre a mÈdia da turma com duas casas decimais.
-c. Coloque a mensagem din‚mica abaixo dentro da repetiÁ„o:
-   "Digite a nota do aluno n˙mero 1"
+b. Mostre a m√©dia da turma com duas casas decimais.
+c. Coloque a mensagem din√¢mica abaixo dentro da repeti√ß√£o:
+   "Digite a nota do aluno n√∫mero 1"
 d. A quantidade de alunos aprovados com nota maior ou igual a cinco. 
 e. A quantidade de alunos reprovados com nota menor que cinco. 
 	 --- DICAS:
-N„o tem chaves opcionais.																			 	// a. 
+N√£o tem chaves opcionais.																			 	// a. 
   printf("\nMedia da turma = %.1f", media); 										// b.
-printf ("Nota do aluno n˙mero %d: ", i); // Mensagem din‚mica. 	// c. 
+printf ("Nota do aluno n√∫mero %d: ", i); // Mensagem din√¢mica. 	// c. 
    if ( nota >= 5 )																							// d.
       ct_aprov ++;
    else																													// e.
       ct_reprov ++;
 
 */
+#include <stdio.h>
+
+int main(void) {
+    float somador = 0;
+    int contador = 0;
+    int aprovados = 0;
+    int reprovados = 0;
+    int quantidade;
+    float nota;
+
+    printf("Digite a quantidade de notas: ");
+    scanf("%d", &quantidade);
+
+    int i;
+    for (i = 0; i < quantidade; i++) {
+        printf("Digite a nota %d: ", i + 1);
+        scanf("%f", &nota);
+
+        contador++;
+        somador += nota;
+
+        if (nota >= 5) {
+            aprovados++;
+        } else {
+            reprovados++;
+        }
+    }
+
+    float media = somador / contador;
+
+    printf("\nQuantidade de notas: %d\n", contador);
+    printf("Media: %.2f\n", media);
+    printf("Aprovados (nota >= 5): %d\n", aprovados);
+    printf("Reprovados (nota < 5): %d\n", reprovados);
+
+    return 0;
+}
