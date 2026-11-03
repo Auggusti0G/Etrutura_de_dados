@@ -1,18 +1,18 @@
-/*                Coment·rio de v·rias linhas.
-  CEUB  -  FATECS  -  ADS  -  ProgramaÁ„o  -  Prof. Barbosa
+/*                Coment√°rio de v√°rias linhas.
+  CEUB  -  FATECS  -  ADS  -  Programa√ß√£o  -  Prof. Barbosa
 
 - Problema:
 
-- Construa o programa que calcule a ·rea de um cÌrculo. O usu·rio fornecer· 
+- Construa o programa que calcule a √°rea de um c√≠rculo. O usu√°rio fornecer√° 
 o valor do raio. 
-Onde:	·rea = pi . r2    
+Onde:	√°rea = pi . r2    
 
-- Passos para a elaboraÁ„o do programa:
+- Passos para a elabora√ß√£o do programa:
 Entrada de dados (leia)
-Processamento (c·lculo)
-SaÌda de dados (escreva)
+Processamento (c√°lculo)
+Sa√≠da de dados (escreva)
 
-Teste 1: Entrada: raio: 2 		SaÌda: Valor da area: 12.560 
+Teste 1: Entrada: raio: 2 		Sa√≠da: Valor da area: 12.560 
 */
 
 #include <stdio.h>		// printf, scanf	    (Bibliotecas)
@@ -22,28 +22,45 @@ int main ( ) {
 	printf ("Digite o valor do raio: ");      	// Entrada de dados.
 	scanf ("%f", & raio);
 	area = 3.14 * pow(raio, 2);                 // pot ( base, expoente );
-//	area = 3.14 * raio * raio);               // Outra soluÁao  
+//	area = 3.14 * raio * raio);               // Outra solu√ßao  
 	printf ("\n\nValor da area: %.3f", area);   // Com 3 casas decimais.
 } 
-/* AlteraÁıes:
-a. Altere a saÌda pra este leiaute:
-   Raio: X.XX     Area: x.xxx              (duas vari·veis na mesma linha).
+/* Altera√ß√µes:
+a. Altere a sa√≠da pra este leiaute:
+   Raio: X.XX     Area: x.xxx              (duas vari√°veis na mesma linha).
 b. Crie uma constante para definir o valor de pi.
-#define PI 3.141593     // DefiniÁ„o do programador da constante PI.
-      Coment·rios de mais de uma linha.
-      PI È a constante 3.141593 definida pelo desenvolvedor
-      ExponenciaÁ„o:       pow(base, expoente)                
+#define PI 3.141593     // Defini√ß√£o do programador da constante PI.
+      Coment√°rios de mais de uma linha.
+      PI √© a constante 3.141593 definida pelo desenvolvedor
+      Exponencia√ß√£o:       pow(base, expoente)                
 
 ---
 - Algoritmo:
 
-inÌcio // Calcular a ·rea de um cÌrculo.
+in√≠cio // Calcular a √°rea de um c√≠rculo.
 	real : raio, area;
 	leia ( raio );
 	area = 3.14 * pot(raio, 2);		    //  area = 3.14 * sqr(raio);  
-	escreva ( "¡rea do cÌrculo: ", area );
+	escreva ( "√Årea do c√≠rculo: ", area );
 fim.     
 
 	
 */
+//codigo com as autera√ß√µes
+#include <stdio.h>    // printf, scanf
+#include <math.h>     // pow (base, expoente)
 
+#define PI 3.141593   // constante PI definida pelo programador
+
+int main(void) {
+    float raio, area;
+
+    printf("Digite o valor do raio: ");
+    scanf("%f", &raio);
+
+    area = PI * pow(raio, 2);
+
+    printf("\nRaio: %.2f     Area: %.3f\n", raio, area);
+
+    return 0;
+}
