@@ -1,62 +1,62 @@
-/*               Coment·rio de v·rias linhas.
-  CEUB  -  FATECS  -  ADS  -  ProgramaÁ„o  -  Prof. Barbosa
+/*               Coment√°rio de v√°rias linhas.
+  CEUB  -  FATECS  -  ADS  -  Programa√ß√£o  -  Prof. Barbosa
 
 - Problema:
 
-- RefaÁa o programa que calcule a mÈdia aritmÈtica de um aluno 
-que realizou duas avaliaÁıes. AlÈm do valor da mÈdia, inclua 
-na tela de saÌda uma das mensagens: ìAluno aprovado.î ou 
-ìAluno reprovado.î.
-  Considere que o aluno ser· aprovado com a mÈdia maior ou 
+- Refa√ßa o programa que calcule a m√©dia aritm√©tica de um aluno 
+que realizou duas avalia√ß√µes. Al√©m do valor da m√©dia, inclua 
+na tela de sa√≠da uma das mensagens: ‚ÄúAluno aprovado.‚Äù ou 
+‚ÄúAluno reprovado.‚Äù.
+  Considere que o aluno ser√° aprovado com a m√©dia maior ou 
 igual a cinco.
 
-Teste 1: Entrada: nota1: 5, nota2: 6    SaÌda: MÈdia = 5.5
+Teste 1: Entrada: nota1: 5, nota2: 6    Sa√≠da: M√©dia = 5.5
                                                Aluno aprovado.
-Teste 2: Entrada: nota1: 5, nota2: 2    SaÌda: MÈdia = 3.5
+Teste 2: Entrada: nota1: 5, nota2: 2    Sa√≠da: M√©dia = 3.5
                                                Aluno reprovado.
 
 - Passos para resolver o problema (algoritmo):
 Entrada de dados (leia)
 Processamento (calcule)
 Testes (se ...)
-SaÌda de dados (escreva) 
+Sa√≠da de dados (escreva) 
 
-Obs.: %f indica que È um n˙mero real (float)
-			%d indica que È um n˙mero inteiro (int)					
+Obs.: %f indica que √© um n√∫mero real (float)
+			%d indica que √© um n√∫mero inteiro (int)					
 			\n quebra de linha
 
-- FÛrmula de mÈdia aritmÈtica: 	media = ____soma____	(numerador)
+- F√≥rmula de m√©dia aritm√©tica: 	media = ____soma____	(numerador)
                                          quantidade		(denominador) 
 
-- FÛrmula de mÈdia aritmÈtica: 	media = __nota1__+__nota2__	(numerador)
+- F√≥rmula de m√©dia aritm√©tica: 	media = __nota1__+__nota2__	(numerador)
                                                  2		      (denominador)
 */
 
 #include <stdio.h>  								// printf, scanf (bibliotecas)
 int main () {     
-   float prova1, prova2, media;    	// Vari·veis do tipo real
+   float prova1, prova2, media;    	// Vari√°veis do tipo real
    printf("Primeira nota: ");       // escreva (" . . . ");
    scanf("%f", &prova1);            // leia (prova1);
    printf("Segunda nota: ");
    scanf("%f", &prova2);            // leia (prova2);
    media = (prova1 + prova2) / 2;   // Processamento
    printf("\nMedia aritmetica: %f", media);  
-   if (media >= 5) {                // se (media >= 5) ent„o
+   if (media >= 5) {                // se (media >= 5) ent√£o
       printf("\nAluno aprovado.");  	  
    }                                     
-   else {                           // sen„o
+   else {                           // sen√£o
       printf("\nAluno reprovado.");
    }                                     
-} /* --- AlteraÁıes:
+} /* --- Altera√ß√µes:
 a. Este programa tem quantas chaves opcionais? 
-b. Mostre o valor da mÈdia aritmÈtica com duas casas decimais.
-c. Depois do valor da mÈdia, mostre tambÈm o valor das duas notas lidas.   
-d. Altere a saÌda. Mostre a mÈdia e a mensagem na mesma linha:
-   MÈdia: x.xxx           Aluno aprovado ou reprovado
-e. RefaÁa-o considerando que a primeira prova tem peso trÍs e 
-   a segunda, peso cinco. Ou seja, calcule a mÈdia ponderada do aluno.
-f. Deixe o programa mais interessante, permita que o usu·rio forneÁa 
-   o valor dos pesos para o c·lculo da mÈdia ponderada.
+b. Mostre o valor da m√©dia aritm√©tica com duas casas decimais.
+c. Depois do valor da m√©dia, mostre tamb√©m o valor das duas notas lidas.   
+d. Altere a sa√≠da. Mostre a m√©dia e a mensagem na mesma linha:
+   M√©dia: x.xxx           Aluno aprovado ou reprovado
+e. Refa√ßa-o considerando que a primeira prova tem peso tr√™s e 
+   a segunda, peso cinco. Ou seja, calcule a m√©dia ponderada do aluno.
+f. Deixe o programa mais interessante, permita que o usu√°rio forne√ßa 
+   o valor dos pesos para o c√°lculo da m√©dia ponderada.
 	--- DICAS:
 Tem quatro chaves opcionais.																	// a.
    printf("\nMedia: %.2f", media);  	// 2 casas decimais.		// b.
@@ -65,10 +65,60 @@ Tem quatro chaves opcionais.																	// a.
 Retire o segundo \n deste comando: 														// d.
    printf("\nMedia: %.2f\nAluno aprovado", media);
    media = (prova1 * 3 + prova2 * 5) / (3 + 5);								// e.
-   float peso1, peso2;      // Declara mais duas vari·veis.		// f.
+   float peso1, peso2;      // Declara mais duas vari√°veis.		// f.
    printf ("\nDigite o peso 1: ");       
    scanf ("%f", & peso1);              
    printf ("\nDigite o peso 2: "); 
    scanf ("%f", & peso2);          
    media = (prova1 * peso1 + prova2 * peso2) / (peso1 + peso2);
 */
+ codigo com todas as autera√ß~oes
+#include <stdio.h>
+int main(){
+	
+	int prova01, prova02, prova03;
+	float media;
+	float media_ponderada ;
+	
+	printf("Digite prova01\n\n");
+	scanf("%d",&prova01);
+	
+	printf("Digite prova02\n\n");
+	scanf("%d",&prova02);
+	
+	printf("Digite prova03\n\n");
+	scanf("%d",&prova03);
+	
+	int peso01, peso02,peso03;
+	
+	printf("Digite peso01 :\n\n");
+	scanf("%d", &peso01);
+	
+	printf("Digite peso02 :\n\n");
+	scanf("%d", &peso02);
+	
+	printf("Digite peso03 :\n\n");
+	scanf("%d", &peso03);
+
+	
+	media_ponderada = (prova01 * peso01 + prova02 * peso02 + prova03 * peso03) /( peso01 + peso02 +peso03) ;
+	
+	
+	media = (prova01 + prova02 + prova03)/3.0;
+	if (media > 5){
+		printf("O aluno esta aprovado a nota dele sera %f\n\n",media);
+	}
+	else{
+		printf("O aluno esta reprovado\n\n ");
+	}
+	
+	printf("A media foi a seguinte %f\n\n",media );
+	
+	printf("O valor das notas digitadas foi %d, %d, %d\n\n", prova01, prova02,prova03);
+	
+	printf("%f", media_ponderada);
+	
+	
+	
+
+}
