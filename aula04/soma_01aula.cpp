@@ -1,51 +1,51 @@
-/*            Coment·rios de v·rias linhas
-  CEUB  -  FATECS  -  ADS  -  ProgramaÁ„o  -  Prof. Barbosa
+/*            Coment√°rios de v√°rias linhas
+  CEUB  -  FATECS  -  ADS  -  Programa√ß√£o  -  Prof. Barbosa
 
 - Problema:
 
-- Implemente um programa com uma funÁ„o e a funÁ„o principal (main):
+- Implemente um programa com uma fun√ß√£o e a fun√ß√£o principal (main):
 
-1. A funÁ„o recebe os dois par‚metros (dois valores), calcula a soma
-dos dois valores e retorna o resultado do c·lculo.
+1. A fun√ß√£o recebe os dois par√¢metros (dois valores), calcula a soma
+dos dois valores e retorna o resultado do c√°lculo.
 
-2- A funÁ„o principal (main) lÍ os dois valores inteiros digitados pelo 
-usu·rio, chama a funÁ„o passando os dois argumentos (dois valores lidos) 
-e depois mostra o valor retornado pela funÁ„o. Use vari·vel local.
+2- A fun√ß√£o principal (main) l√™ os dois valores inteiros digitados pelo 
+usu√°rio, chama a fun√ß√£o passando os dois argumentos (dois valores lidos) 
+e depois mostra o valor retornado pela fun√ß√£o. Use vari√°vel local.
 
-Teste: Entrada: 2 e 3                   SaÌda: Soma = 5				*/
+Teste: Entrada: 2 e 3                   Sa√≠da: Soma = 5				*/
 
 #include <stdio.h>             	 // printf, scanf (Biblioteca)
 
-// A funcao recebe 2 par‚metros inteiros e retorna a soma para funÁ„o main
+// A funcao recebe 2 par√¢metros inteiros e retorna a soma para fun√ß√£o main
 int retornaSoma(int v1, int v2){ // "v1" recebe valor1, "v2" recebe valor2
-  int soma;      // Vari·vel local.
+  int soma;      // Vari√°vel local.
   soma = v1 + v2;
-  return soma;   // Retorna o valor da vari·vel "soma" para funÁ„o main
+  return soma;   // Retorna o valor da vari√°vel "soma" para fun√ß√£o main
 }
 
 int main () {                      
-  int valor1, valor2, retorno; // Vari·vel local
+  int valor1, valor2, retorno; // Vari√°vel local
   printf("Valor 1: "); 				 // Tela de entrada de dados
   scanf("%d", &valor1); 
   printf("Valor 2: ");
   scanf("%d", &valor2);
-  retorno = retornaSoma(valor1, valor2); // Chama a funÁ„o e passa os valores
+  retorno = retornaSoma(valor1, valor2); // Chama a fun√ß√£o e passa os valores
   printf("\nSoma = %d\n", retorno);
 } 
-/* --- AlteraÁıes:
-a. RefaÁa a tela de saida para mostrar este layout: 2 + 3 = 5
-b. Acrescente mais uma funÁ„o. A funÁ„o somaTres recebe trÍs valores
-   inteiros e retorna a soma dos trÍs valores.
-c. No final do main, chame a funÁ„o somaTres passando trÍs argumentos
-d. Altere a funÁ„o retornaSoma, refaÁa a funÁ„o sem usar a vari·vel soma.
-e. No final do main, chame a funÁ„o retornaSoma mais uma vez, passe 
+/* --- Altera√ß√µes:
+a. Refa√ßa a tela de saida para mostrar este layout: 2 + 3 = 5
+b. Acrescente mais uma fun√ß√£o. A fun√ß√£o somaTres recebe tr√™s valores
+   inteiros e retorna a soma dos tr√™s valores.
+c. No final do main, chame a fun√ß√£o somaTres passando tr√™s argumentos
+d. Altere a fun√ß√£o retornaSoma, refa√ßa a fun√ß√£o sem usar a vari√°vel soma.
+e. No final do main, chame a fun√ß√£o retornaSoma mais uma vez, passe 
    os valores (4, 6). 
 	--- DICAS: 
   printf("\n%d + %d = %d\n", valor1, valor2, retorno);					// a.
 int retornaSomaTres(int v1, int v2, int v3) {  									// b.
-	int sm;             		// Vari·vel local.
+	int sm;             		// Vari√°vel local.
 	sm = v1 + v2 + v3;
-	return sm;          		// Retorna o valor de sm pra funÁ„o main.      
+	return sm;          		// Retorna o valor de sm pra fun√ß√£o main.      
 }
   int valor3, retorno2; 			 																	// c.
   ...
@@ -61,4 +61,48 @@ int retornaSoma(int v1, int v2){ 																// d.
   printf("\n%4 + %6 = %d\n", retorno1);
 
 */
+
+//Fazendo com todas asautera√ß√µes 
+
+#include <stdio.h>
+
+int soma( int num01 , int num02){
+	return num01 + num02 ;
+}
+
+int soma_tres(int a , int b , int c){
+	return a + b + c ;
+}
+int main(){
+	int n01 ,n02 ,n03;
+	
+	printf("Digite o primeiro valor:");
+	scanf("%d", &n01);
+	
+	printf("Digite o segundo valor:");
+	scanf("%d", &n02);
+	
+	printf("Digite o terceiro valor:");
+	scanf("%d", &n03);
+	
+	int resultado ;
+	resultado = soma(n01, n02);
+	printf("\nO valor da soma sera : %d\n\n", resultado);
+	
+	printf("O calculo foi : %d + %d = %d\n\n", n01 ,n02 ,resultado);
+	
+	int resultado_somatres;
+	resultado_somatres = soma_tres(n01, n02, n03);
+	
+	printf("Mostrando a soma dos tres valores :");
+	printf("%d", resultado_somatres);
+	
+	int resultado_alt ;
+	resultado_alt = soma(12, 34);
+	
+	printf("\n\nMostrando o valor alterado da soma : ");
+	printf("%d", resultado_alt);
+	
+	
+}
 
