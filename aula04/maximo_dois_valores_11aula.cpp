@@ -108,3 +108,58 @@ int main() {
 
     return 0;
 }
+//--------------------------------------------------------
+//--------Segunda versao e mas correta das auterações ----
+//-------------------------------------------------------
+#include <stdio.h>
+
+int funcao_compara(int num01 , int num02){
+	if (num01 > num01){
+		return num01;
+	}else if(num02 > num01){
+		return num02;
+	}else{
+		return num01;
+	}
+}
+int funcao_menor(int num01, int num02){
+	if (num01 < num02){
+		return num01;
+	}else if (num02 < num01){
+		return num02;
+	}else {
+		return num01;
+	}
+}
+int main(){
+	
+	int numero01, numero02;
+	
+	printf("Digite o numero01 :");
+	scanf("%d", &numero01);
+	
+	printf("Digite o numero02 :");
+	scanf("%d", &numero02);
+	
+	printf("\nMostrando sem variavel\n");
+	printf("numero maior %d\n\n", funcao_compara(numero01, numero02));
+	
+	// Usando a variavel auxiliar local 
+	int resultado ;
+	resultado = funcao_compara(numero01, numero02) ;
+	
+	printf("Mostrando com a variavel auxiliar local :\n");
+	printf("numero maior %d\n\n", resultado);
+	
+	// Mostrando a funcao menor 
+	int resultado_menor ;
+	resultado_menor = funcao_menor(numero01, numero02);
+	
+	printf("Mostrando o menor valor dentro os dois\n");
+	printf("numero menor %d\n\n", resultado_menor );
+	
+	printf("Mostrando sem usar a variavel logal auxiliar:\n");
+	printf("menor numero %d",funcao_menor(numero01,numero02));
+	
+
+}
