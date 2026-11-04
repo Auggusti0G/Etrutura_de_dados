@@ -1,52 +1,52 @@
-/*            Coment·rios de v·rias linhas
-  CEUB  -  FATECS  -  ADS  -  ProgramaÁ„o  -  Prof. Barbosa
+/*            Coment√°rios de v√°rias linhas
+  CEUB  -  FATECS  -  ADS  -  Programa√ß√£o  -  Prof. Barbosa
 
 - Problema:
 
-- Implemente um programa com uma funÁ„o e a funÁ„o principal (main):
+- Implemente um programa com uma fun√ß√£o e a fun√ß√£o principal (main):
 
-1- A funÁ„o recebe dois par‚metros (dois n˙meros inteiros), compara os
-   dois valores e retorna o maior valor. Se os n˙meros forem iguais, a
-   funÁ„o retorne um deles. Use vari·vel local.
+1- A fun√ß√£o recebe dois par√¢metros (dois n√∫meros inteiros), compara os
+   dois valores e retorna o maior valor. Se os n√∫meros forem iguais, a
+   fun√ß√£o retorne um deles. Use vari√°vel local.
 
-2- A funÁ„o main lÍ dois n˙meros digitados pelo usu·rio, chama a funÁ„o 
-   passando os dois argumentos (os dois n˙meros lidos) e gera a tela de
-	 saÌda com o valor retornado pela funÁ„o. Use vari·vel local.
+2- A fun√ß√£o main l√™ dois n√∫meros digitados pelo usu√°rio, chama a fun√ß√£o 
+   passando os dois argumentos (os dois n√∫meros lidos) e gera a tela de
+	 sa√≠da com o valor retornado pela fun√ß√£o. Use vari√°vel local.
 
-Teste 1:    Entrada: 2 e 3          SaÌda: Maior valor: 3
-Teste 2:    Entrada: 4 e 3          SaÌda: Maior valor: 4
-Teste 3:    Entrada: 5 e 5          SaÌda: Maior valor: 5			*/
+Teste 1:    Entrada: 2 e 3          Sa√≠da: Maior valor: 3
+Teste 2:    Entrada: 4 e 3          Sa√≠da: Maior valor: 4
+Teste 3:    Entrada: 5 e 5          Sa√≠da: Maior valor: 5			*/
 
 #include <stdio.h>          // printf, scanf (Bibliotecas)
-int maximo_dois(int n1, int n2){ // A funÁ„o recebe 2 int e retorna 1 int.
-  int maior;                // Vari·vel local da funÁ„o
+int maximo_dois(int n1, int n2){ // A fun√ß√£o recebe 2 int e retorna 1 int.
+  int maior;                // Vari√°vel local da fun√ß√£o
   if (n1 > n2) {            // Se n1 for maior que n2
     maior = n1;
   }
   else {
     maior = n2;
   }
-  return maior; // Retorna pra funÁ„o main o valor da vari·vel maior
+  return maior; // Retorna pra fun√ß√£o main o valor da vari√°vel maior
 }
 
 int main() {
-  int valor1, valor2, vl_retorno; // Vari·veis locais
+  int valor1, valor2, vl_retorno; // Vari√°veis locais
   printf("Primeiro valor: "); 		// Tela de entrada de dados.
-  scanf("%d", &valor1);						// LÍ dois n˙meros do usu·rio
+  scanf("%d", &valor1);						// L√™ dois n√∫meros do usu√°rio
   printf("Segundo valor: "); 
   scanf("%d", &valor2);    
-  vl_retorno = maximo_dois(valor1, valor2); // Chama funÁ„o, passa 2 argumentos
+  vl_retorno = maximo_dois(valor1, valor2); // Chama fun√ß√£o, passa 2 argumentos
   printf("\nMaior valor: %d\n", vl_retorno);
 } 
-/* --- ALTERA«’ES:
-a. RefaÁa a funÁ„o main sem usar a vari·vel local vl_retorno.
-b. RefaÁa a funÁ„o maximo_dois sem usar a vari·vel local maior.
-c. Acrescente a funÁ„o minimo. Ela recebe 2 valores e retorna o menor deles
+/* --- ALTERA√á√ïES:
+a. Refa√ßa a fun√ß√£o main sem usar a vari√°vel local vl_retorno.
+b. Refa√ßa a fun√ß√£o maximo_dois sem usar a vari√°vel local maior.
+c. Acrescente a fun√ß√£o minimo. Ela recebe 2 valores e retorna o menor deles
 
     ---DICAS: 
   printf("\nMaior valor: %d\n", maximo_dois(valor1, valor2));		//a.
 int maximo_dois (int n1, int n2) {   														// b.
-   if (n1 > n2)       			// Sem a vari·vel maior.                  
+   if (n1 > n2)       			// Sem a vari√°vel maior.                  
      return n1;
    else
      return n2;                         
@@ -57,3 +57,54 @@ int min (int n1, int n2) {              												// c.
      return n2;                         .
 
 */
+
+#include <stdio.h>
+
+int funcao_compara(int numero01, int numero02) {
+    if (numero01 > numero02) {
+        printf("O valor de num 01 e maior: ");
+        return numero01;
+    } else if (numero02 > numero01) {
+        printf("O numero maior e o num 02: ");
+        return numero02;
+    } else {
+        printf("Os valores sao iguais: ");
+        return numero01;
+    }
+}
+
+int menor(int numero01, int numero02) {
+    if (numero01 < numero02) {
+        printf("O menor numero e o num 01: ");
+        return numero01;
+    } else if (numero02 < numero01) {
+        printf("O menor numero e o num 02: ");
+        return numero02;
+    } else {
+        printf("Sao iguais: ");
+        return numero01;
+    }
+}
+
+int main() {
+    int num01, num02, resultado;
+
+    printf("Digite o numero 01: ");
+    scanf("%d", &num01);
+
+    printf("Digite o numero 02: ");
+    scanf("%d", &num02);
+
+    printf("\n");
+
+    resultado = funcao_compara(num01, num02);
+    printf("%d\n\n", resultado);
+
+    printf("Mostrando sem usar a variavel auxiliar:\n");
+    printf("%d\n\n", funcao_compara(num01, num02));
+
+    printf("Mostrando o menor sem usar a variavel auxiliar:\n");
+    printf("%d\n", menor(num01, num02));
+
+    return 0;
+}
