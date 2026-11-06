@@ -2,8 +2,8 @@
 
 // Aluno : Rafael Augusto               // RA: 22508717
 
-// 1. Desenvolva um programa que calcule a mÈdia aritmÈtica de uma turma, onde cada aluno realizou uma avaliaÁ„o. N„o sabemos a quantidade de alunos, por isso usamos o valor "-1" como condiÁ„o de saÌda (flag).
-//	Na tela de saÌda, mostre a mÈdia aritmÈtica da turma e a quantidade de alunos da turma.
+// 1. Desenvolva um programa que calcule a m√©dia aritm√©tica de uma turma, onde cada aluno realizou uma avalia√ß√£o. N√£o sabemos a quantidade de alunos, por isso usamos o valor "-1" como condi√ß√£o de sa√≠da (flag).
+//	Na tela de sa√≠da, mostre a m√©dia aritm√©tica da turma e a quantidade de alunos da turma.
 
 #include <stdio.h>
 
@@ -33,7 +33,6 @@ int main() {
         soma += nota;
         quantidade++;
     }
-
     // Exibicao dos resultados com verificacao para evitar divisao por zero
     printf("\n---------------------------------\n");
     if (quantidade > 0) {
@@ -46,3 +45,46 @@ int main() {
 
     return 0;
 }
+
+
+//---------------------------------------------------------------------------
+//-------------------------Elaborando de outra maneira-----------------------
+//---------------------------------------------------------------------------
+
+#include <stdio.h>
+int main(){
+	
+	int contador = 0 ;
+	int somador = 0;
+	float notas ;
+	int i = 0 ;
+	float media ;
+	
+	printf("Entrada de dados :\n\n");
+	
+	while(true){
+		printf("Digite as notas da turma %d : ", i + 1);
+		scanf("%f", &notas);
+		
+		if (notas  == -1){
+			break;
+		}
+		i++;
+		contador++;
+		somador+=notas;
+		if (contador == 0){
+			printf("Nenhum valor foi digitado :");
+		}else{
+			media = somador / contador ;
+		}
+	}
+	printf("\nA media da turma foi : %f\n\n", media );
+	
+	printf("A soma dos das notas ser√£o : %d\n\n", somador);
+	
+	printf("A qunatidade de alunos da turma sera : %d", contador);
+	
+	
+}
+
+
