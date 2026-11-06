@@ -1,34 +1,35 @@
-// Respostas refrente a quarta questão quetsao da prova protica de C 
+// Respostas refrente a quarta questÃ£o quetsao da prova protica de C 
 
 // Aluno : Rafael Augusto               // RA: 22508717
 
-//4. Projete a função potencia que recebe dois valores inteiros, a base e o expoente, e retorna o valor da potência correspondente. 
-//A função main lê o valor da a base e do expoente, chama a função potencia passando os dois argumentos (os valores lidos) e mostra o valor
-//retornado pela função potencia. Considere que a base pode ser um valor inteiro positivo, nulo ou negativo e o expoente, um inteiro positivo ou nulo.
-//Definição: potência é a base multiplicada por ela mesma expoente vezes.
+//4. Projete a funÃ§Ã£o potencia que recebe dois valores inteiros, a base e o expoente, e retorna o valor da potÃªncia correspondente. 
+//A funÃ§Ã£o main lÃª o valor da a base e do expoente, chama a funÃ§Ã£o potencia passando os dois argumentos (os valores lidos) e mostra o valor
+//retornado pela funÃ§Ã£o potencia. Considere que a base pode ser um valor inteiro positivo, nulo ou negativo e o expoente, um inteiro positivo ou nulo.
+//DefiniÃ§Ã£o: potÃªncia Ã© a base multiplicada por ela mesma expoente vezes.
 
 #include <stdio.h>
 
-// Função que calcula e retorna o valor absoluto (módulo)
-float valor_absoluto(float numero) {
-    if (numero < 0) {
-        return numero * -1;
-    }
-    return numero;
+// FunÃ§Ã£o que calcula e retorna o valor absoluto (mÃ³dulo)
+
+
+ #include <stdio.>
+
+int valor_potencia(int numero , int expoente){
+	int resultado = numero ** potncia ;
+	return resultado ;
 }
 
-int main() {
-    float num, resultado;
-
-    // Leitura do número
-    printf("Digite um numero: ");
-    scanf("%f", &num);
-
-    // Chamada da função valor_absoluto
-    resultado = valor_absoluto(num);
-
-    // Exibição do resultado
-    printf("O valor absoluto de %.2f eh %.2f\n", num, resultado);
-
-    return 0;
+int main (){
+	
+	int valor , expo ;
+	
+	printf("Digite um numero inteiro :");
+	scanf("%d", &valor);
+	
+	printf("Digite um expoente inteiro :");
+	scanf("%d", &expo);
+	
+	int resultado = valor_potencia(valor, expo);
+	printf("O valor da potencia sera : %d", resultado );
+	
 }
