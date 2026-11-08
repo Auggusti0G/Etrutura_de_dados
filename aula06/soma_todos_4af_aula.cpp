@@ -1,25 +1,25 @@
-/*               Coment·rios de v·rias linhas.
-  CEUB  -  FATECS  -  ADS  -  ProgramaÁ„o  -  Prof. Barbosa
+/*               Coment√°rios de v√°rias linhas.
+  CEUB  -  FATECS  -  ADS  -  Programa√ß√£o  -  Prof. Barbosa
 
 - Problema anterior:
 - Desenvolva o programa que leia quarenta valores inteiros digitados 
-pelo usu·rio, armazene-os num vetor (array) e calcule a soma de todos
-os valores do vetor. Gere a tela de saÌda com as seguintes informaÁıes:
+pelo usu√°rio, armazene-os num vetor (array) e calcule a soma de todos
+os valores do vetor. Gere a tela de sa√≠da com as seguintes informa√ß√µes:
 mostre os valores armazenados no vetor e a soma de todos os valores do
 vetor. Use uma constante para definir o tamanho do vetor.
 
 
 - Problema atual:
 
-- RefaÁa o problema anterior usando procedimento e o main.
+- Refa√ßa o problema anterior usando procedimento e o main.
 
-1- Crie a funÁ„o soma vetor, ela recebe o endereÁo do vetor e o tamanho do
+1- Crie a fun√ß√£o soma vetor, ela recebe o endere√ßo do vetor e o tamanho do
 vetor, calcula a soma de todos os valores no vetor e retorna a soma dos valores
 
-2- A funÁ„o principal (main) lÍ quarenta valores inteiros digitados pelo
-usu·rio, armazene-os num vetor (array), chama a funÁ„o soma vetor 
-passando o endereÁo do vetor, o tamanho do vetor e mostra o valor retornado pela
-funÁ„o soma vetor, ou seja, o resultado recebido. Use vari·vel local.		
+2- A fun√ß√£o principal (main) l√™ quarenta valores inteiros digitados pelo
+usu√°rio, armazene-os num vetor (array), chama a fun√ß√£o soma vetor 
+passando o endere√ßo do vetor, o tamanho do vetor e mostra o valor retornado pela
+fun√ß√£o soma vetor, ou seja, o resultado recebido. Use vari√°vel local.		
 
 - Para facilitar os testes de desenvolvimento, resolva com quatro valores
 
@@ -28,46 +28,46 @@ funÁ„o soma vetor, ou seja, o resultado recebido. Use vari·vel local.
 - Entrada de dados: 
 Valor inteiro: 5, 6, 7, 2
 
-- SaÌda de dados:
+- Sa√≠da de dados:
 - Valores no vetor:
 5	6	7	2
 Soma dos valores = 20						  			*/
 
 #include <stdio.h>  // printf, scanf (Bibliotecas)
-int somaVetor(int vValores[], int tam){ // A funÁ„o recebe o vetor e o tamanho
+int somaVetor(int vValores[], int tam){ // A fun√ß√£o recebe o vetor e o tamanho
   int soma = 0;
   for (int i = 0; i < tam; i++) {
     soma = soma + vValores[i]; // soma += vValores[i];
   }
-  return soma;                 // Retorna o valor da soma para funÁ„o main.
+  return soma;                 // Retorna o valor da soma para fun√ß√£o main.
 } 
 
 int main() {                           
   int i, valorRetorno,
-        valor [4]; 	 // Vetor com 4 posiÁıes, da posiÁ„o 0 a posiÁ„o 3
+        valor [4]; 	 // Vetor com 4 posi√ß√µes, da posi√ß√£o 0 a posi√ß√£o 3
   printf("- Entrada de dados:\n"); // Tela de entrada
   for (i = 0; i < 4; i++) {
-    printf("Valor: "); 					   // Mensagem est·tica.
+    printf("Valor: "); 					   // Mensagem est√°tica.
     scanf("%d", &valor[i]);
   }
-  valorRetorno = somaVetor(valor, 4); // Chama a funÁ„o, passa o vetor e o tamanho
+  valorRetorno = somaVetor(valor, 4); // Chama a fun√ß√£o, passa o vetor e o tamanho
   printf("\nSoma dos valores = %d", valorRetorno);
-  printf("\n\n- Valores no vetor:"); // Tela de saÌda
+  printf("\n\n- Valores no vetor:"); // Tela de sa√≠da
   for(i = 0; i < 4; i++) {
     printf("\n%2d", valor[i]); 
   }
 } 
-/* --- ALTERA«’ES:
+/* --- ALTERA√á√ïES:
 a. Este programa tem quantas chaves opcionais?
-b. Crie o procedimento mostraVetor. Ela recebe o endereÁo do vetor, 
-   mostra todos os valores armazenados no vetor e n„o retorna nada.
-c. Na tela de saÌda, acrescente a posiÁ„o (Ìndice), ou seja, mostre
-   a posiÁ„o (Ìndice) do vetor e o valor armazenado na posiÁ„o.
+b. Crie o procedimento mostraVetor. Ela recebe o endere√ßo do vetor, 
+   mostra todos os valores armazenados no vetor e n√£o retorna nada.
+c. Na tela de sa√≠da, acrescente a posi√ß√£o (√≠ndice), ou seja, mostre
+   a posi√ß√£o (√≠ndice) do vetor e o valor armazenado na posi√ß√£o.
 
 	--- DICAS:
-Na funÁ„o soma tem duas chaves opcionais, nomain tem duas chaves 				 // a.
-void mostraVetor(int vetorNum[], int tam){ // Recebe o endereÁo do vetor // b.
-	printf("\n\n- Saida de dados:\n"); // Tela de saÌda de dados.
+Na fun√ß√£o soma tem duas chaves opcionais, nomain tem duas chaves 				 // a.
+void mostraVetor(int vetorNum[], int tam){ // Recebe o endere√ßo do vetor // b.
+	printf("\n\n- Saida de dados:\n"); // Tela de sa√≠da de dados.
 	for (int i = 0; i < tam; i++) {
 		printf("%d\n", vetorNum[i] );
 	}
@@ -79,3 +79,69 @@ void mostraVetor(int vetorNum[], int tam){ // Recebe o endereÁo do vetor // b.
   ...
 
 */
+#include <stdio.h> //Biblioteca printf scanf
+
+//Criando uma funcao que vai devolver uma media aritmetica 
+
+// mostrando oque o vetor devolve e passando duas variavesi como parmetros
+
+//Recebe dois parametors e devole float:
+void mostrar_posicao(float vetor_posi[] , float tmn){
+	int i ;
+	
+	for(i = 0 ; i < tmn ; i++){
+		printf("%d - %.2f\n",i+1, vetor_posi[i]);
+	}
+}
+
+float mostrar_media( float vetor[], int tamanho ){
+	
+	
+	int contador = 0 ;   // Conta os valores somados quantidade 
+	int somador = 0 ;   //soma todos os numeros digitado
+	
+	int i ;             // Controla o for servindo de indice 
+	
+	int media ;
+	
+	for(i= 0 ; i < tamanho ; i++){
+		printf("%.2f ", vetor[i]);
+		
+		contador++;
+		somador+=vetor[i];
+	}
+	if(contador <= 0){
+		printf("Nao foi digitdo nenhum numero :");
+	}else{
+		printf("\n\nMostrando a media : \n\n");
+	    media = somador / contador ;
+   }
+   return media ;
+}
+
+int main( ){
+	
+	float vet[3];
+	int i ;
+	float resultado ;
+	
+	int resultado_posi_notas ;
+	
+	printf("Entrada de dados : \n\n");
+	
+	for(i = 0 ; i < 3; i++){
+		printf("Digite os valores do vetor: \n\n ");
+		scanf("%f", &vet[i]);
+	}
+	printf("valores vetor : \n\n");
+	
+	resultado = mostrar_media(vet,3);
+	
+	printf("\n%2.f\n\n",resultado);
+	
+	
+	printf("Mostrando as notas e suas posicoes :\n");
+	mostrar_posicao(vet, 3);
+	
+}
+
