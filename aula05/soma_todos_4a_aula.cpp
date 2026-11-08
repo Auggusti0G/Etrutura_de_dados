@@ -1,11 +1,11 @@
-/*               Coment·rios de v·rias linhas.
-  CEUB  -  FATECS  -  ADS  -  ProgramaÁ„o  -  Prof. Barbosa
+/*               Coment√°rios de v√°rias linhas.
+  CEUB  -  FATECS  -  ADS  -  Programa√ß√£o  -  Prof. Barbosa
 
 - Problema:
 
 - Desenvolva o programa que leia quarenta valores inteiros digitados 
-pelo usu·rio, armazene-os num vetor (array) e calcule a soma de todos
-os valores do vetor. Gere a tela de saÌda com as seguintes informaÁıes:
+pelo usu√°rio, armazene-os num vetor (array) e calcule a soma de todos
+os valores do vetor. Gere a tela de sa√≠da com as seguintes informa√ß√µes:
 mostre os valores armazenados no vetor e a soma de todos os valores do
 vetor. Use uma constante para definir o tamanho do vetor.
 
@@ -15,7 +15,7 @@ vetor. Use uma constante para definir o tamanho do vetor.
 
 - Entrada de dados: 
 Valor inteiro: 5, 6, 7, 2
-- SaÌda de dados:
+- Sa√≠da de dados:
 
 - Valores no vetor:
 5
@@ -27,33 +27,33 @@ Soma dos valores = 20
 */
 #include <stdio.h> // printf, scanf (Bibliotecas)
 int main ( ) {                           
-  int i, 					 // Vari·vel usada no for
+  int i, 					 // Vari√°vel usada no for
       soma = 0, 	 // Somador
-      valor [4]; 	 // Vetor com 4 posiÁıes, da posiÁ„o 0 a posiÁ„o 3
+      valor [4]; 	 // Vetor com 4 posi√ß√µes, da posi√ß√£o 0 a posi√ß√£o 3
   printf("- Entrada de dados:\n"); // Tela de entrada de dados
 	for(i = 0; i < 4; i++){          // for(i = 0; i < 4; i = i + 1){
 	  printf("Valor inteiro: ");        
     scanf("%d", &valor[i]);
     soma = soma + valor[i];				 // soma += valor[i]; (somador)
   }
-  printf("\n\n- Valores no vetor:"); // Tela de saÌda de dados
+  printf("\n\n- Valores no vetor:"); // Tela de sa√≠da de dados
   for(i = 0; i < 4; i++) {
     printf("\n%2d", valor[i]); 
   }
   printf("\nSoma dos valores = %d", soma);
 } 
-/* --- ALTERA«’ES:
+/* --- ALTERA√á√ïES:
 a. Este programa tem quantas chaves opcionais?
-b. Na tela de saÌda, acrescente a posiÁ„o (Ìndice), ou seja, mostre
-   a posiÁ„o (Ìndice) do vetor e o valor armazenado na posiÁ„o.
+b. Na tela de sa√≠da, acrescente a posi√ß√£o (√≠ndice), ou seja, mostre
+   a posi√ß√£o (√≠ndice) do vetor e o valor armazenado na posi√ß√£o.
 c. Conte e mostre a quantidade de valores maior que vinte.
 d. Conte e mostre a quantidade de valores pares.
-e. Na tela de entrada, mostre a mensagem din‚mica antes do scanf.
-   Exemplo: Valor inteiro da posiÁ„o 0:
+e. Na tela de entrada, mostre a mensagem din√¢mica antes do scanf.
+   Exemplo: Valor inteiro da posi√ß√£o 0:
 	 --- DICAS:
 Tem duas chaves opcionais no segundo for.												// a.
 	for (i = 0; i < 4; i++){ 																			// b.
-    printf("posicao %d: %d\n", i, valor[i]); // Mostra posiÁ„o e valor
+    printf("posicao %d: %d\n", i, valor[i]); // Mostra posi√ß√£o e valor
   }
   int ct = 0;																										// c.
   ...
@@ -74,3 +74,34 @@ Tem duas chaves opcionais no segundo for.												// a.
   printf("\nPares: %d", pares);
 
 */
+
+#include <stdio.h>
+
+int main() {
+  int i ;
+  int vetor[5];
+  int somatorio = 0 ;
+  int maiores_vint = 0 ;
+  int par = 0 ;
+  
+  printf("- Entrada de dados :\n\n");
+  
+  for(i = 0 ; i < 5 ; i++){
+  	printf("Digite os valores do array:");
+  	scanf("%d", &vetor[i]);
+  	
+  	somatorio+= vetor[i];
+  	if(vetor[i] > 20){
+  		maiores_vint ++;
+	  }
+	if(vetor[i] % 2 == 0){
+		par++;
+	}
+  }
+  for(i = 0 ; i < 5; i++){
+  	printf("\n%7d - %d\n", i, vetor[i]);
+  }
+  printf("soma %d\n\n", somatorio);
+  printf("par %d\n\n", par);
+  printf("maior %d\n\n", maiores_vint);
+}
