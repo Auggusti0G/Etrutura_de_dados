@@ -1,12 +1,12 @@
-/*            Coment·rios de v·rias linhas
-  CEUB  -  FATECS  -  ADS  -  ProgramaÁ„o  -  Prof. Barbosa
+/*            Coment√°rios de v√°rias linhas
+  CEUB  -  FATECS  -  ADS  -  Programa√ß√£o  -  Prof. Barbosa
 
 - Problema:
 
-- Leia trinta valores inteiros digitados pelo usu·rio e armazene-os num
-vetor. Gere a tela de saÌda com os valores armazenados no vetor.
+- Leia trinta valores inteiros digitados pelo usu√°rio e armazene-os num
+vetor. Gere a tela de sa√≠da com os valores armazenados no vetor.
 
-- Para facilitar os testes de desenvolvimento, resolva com trÍs valores
+- Para facilitar os testes de desenvolvimento, resolva com tr√™s valores
 
 - Testes:
 
@@ -20,50 +20,99 @@ Valor ineiro: 5, 6, 7
 
 #include <stdio.h> // printf, puts, scanf (biblioteca)
 int main () {
-	int i;          // Vari·vel de controle do for.
-	int numero [3]; // Vetor de inteiro com 3 posiÁıes, da posiÁ„o 0 a 2
+	int i;          // Vari√°vel de controle do for.
+	int numero [3]; // Vetor de inteiro com 3 posi√ß√µes, da posi√ß√£o 0 a 2
 	printf("- Entrada de dados:\n"); // Tela de entrada de dados.
 	for(i = 0; i < 3; i++) {         // for(i = 0; i <= 2; i = i + 1) 
 	  printf("Valor inteiro: ");        
 	  scanf("%d", &numero[i]);
 	}
 
-	printf("\n\n- Saida de dados:\n"); // Tela de saÌda de dados.
+	printf("\n\n- Saida de dados:\n"); // Tela de sa√≠da de dados.
 	for(i = 0; i < 3; i++) {					 // for(i = 0; i <= 2; i=i+1)
 	  printf("%d\n", numero[i]);
 	}
 } 
-/* --- ALTERA«’ES:
+/* --- ALTERA√á√ïES:
 a. Este programa tem quantas chaves opcionais?
-b. Na saÌda, mostre tambÈm a posiÁ„o onde o valor est· armazenado no vetor
-	 PosiÁ„o - valor
+b. Na sa√≠da, mostre tamb√©m a posi√ß√£o onde o valor est√° armazenado no vetor
+	 Posi√ß√£o - valor
 	 0 - 5
 	 1 - 6
 	 2 - 7
-c. Depois do for da tela de saÌda, altere o valor da posiÁ„o 1 do vetor.
-   Armazene 33 na posiÁ„o 1 (Ìndice 1) do vetor. 
-d. Mostre o vetor novamente pra verificar a alteraÁ„o do item anterior.
-e. RefaÁa a letra "c" com valor digitado pelo usu·rio
-f. Mostre o vetor novamente pra verificar a alteraÁ„o do item anterior.
+c. Depois do for da tela de sa√≠da, altere o valor da posi√ß√£o 1 do vetor.
+   Armazene 33 na posi√ß√£o 1 (√≠ndice 1) do vetor. 
+d. Mostre o vetor novamente pra verificar a altera√ß√£o do item anterior.
+e. Refa√ßa a letra "c" com valor digitado pelo usu√°rio
+f. Mostre o vetor novamente pra verificar a altera√ß√£o do item anterior.
 
 	--- DICAS:
 Tem duas chaves opcionais.																					// a.
-  printf("PosiÁ„o - Valor");
+  printf("Posi√ß√£o - Valor");
 	for (i = 0; i < 3; i ++) {																				// b.
-    printf("%d - %d\n", i, numero [i]); // Mostra posiÁ„o e valor	 
+    printf("%d - %d\n", i, numero [i]); // Mostra posi√ß√£o e valor	 
   }
   ...
   numero [1] = 33;               // Colocar depois do segundo for		// c.
-	printf("\n\n- Saida de dados:\n"); // Tela de saÌda de dados.		  // d.
+	printf("\n\n- Saida de dados:\n"); // Tela de sa√≠da de dados.		  // d.
 	for(i = 0; i < 3; i++) {					 // for(i = 0; i <= 2; i=i+1)
 	  printf("%d\n", numero[i]);
 	}
-  printf("Valor inteiro da posiÁ„o 1: "); // Digite um valor				// e.
+  printf("Valor inteiro da posi√ß√£o 1: "); // Digite um valor				// e.
   scanf ("%d", &numero[1]);
-	printf("\n\n- Saida de dados:\n"); // Tela de saÌda de dados.		  // f.
+	printf("\n\n- Saida de dados:\n"); // Tela de sa√≠da de dados.		  // f.
 	for(i = 0; i < 3; i++) {					 // for(i = 0; i <= 2; i=i+1)
 	  printf("%d\n", numero[i]);
 	}
+	
 
 */
 
+
+#include <stdio.h>
+
+int main(void) {
+    int i;
+    int numero[3];
+    int novo_valor;
+
+    /* a. O programa original tem 1 par de chaves opcionais:
+          as do segundo for, que tem uma unica instrucao. */
+
+    printf("- Entrada de dados:\n");
+    for (i = 0; i < 3; i++) {
+        printf("Valor inteiro: ");
+        scanf("%d", &numero[i]);
+    }
+
+    // b. Saida mostrando posicao e valor
+    printf("\n\n- Saida de dados:\n");
+    printf("Posicao - valor\n");
+    for (i = 0; i < 3; i++) {
+        printf("%d - %d\n", i, numero[i]);
+    }
+
+    // c. Armazena 33 na posicao 1
+    numero[1] = 33;
+
+    // d. Mostra o vetor de novo
+    printf("\n- Vetor depois de colocar 33 na posicao 1:\n");
+    printf("Posicao - valor\n");
+    for (i = 0; i < 3; i++) {
+        printf("%d - %d\n", i, numero[i]);
+    }
+
+    // e. Altera a posicao 1 com valor digitado pelo usuario
+    printf("\nDigite o novo valor para a posicao 1: ");
+    scanf("%d", &novo_valor);
+    numero[1] = novo_valor;
+
+    // f. Mostra o vetor de novo
+    printf("\n- Vetor depois da alteracao do usuario:\n");
+    printf("Posicao - valor\n");
+    for (i = 0; i < 3; i++) {
+        printf("%d - %d\n", i, numero[i]);
+    }
+
+    return 0;
+}
