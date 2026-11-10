@@ -1,46 +1,46 @@
-/*               Coment·rios de v·rias linhas.
-  CEUB  -  FATECS  -  ADS  -  ProgramaÁ„o  -  Prof. Barbosa
+/*               Coment√°rios de v√°rias linhas.
+  CEUB  -  FATECS  -  ADS  -  Programa√ß√£o  -  Prof. Barbosa
   
 - Estrutura de dados: 
 
-- Busca linear ou sequencial sem rotina e com dados n„o ordenados.
+- Busca linear ou sequencial sem rotina e com dados n√£o ordenados.
 
 - Implemente:
 
 1. No main, crie um vetor com os valores: 23, 4, 67, -8, 54, 90, 21
-2. Crie a vari·vel "encontrou" (flag) com valor incial -1
-3. Leia o valor da pesquisa (busca) digitado pelo usu·rio.
+2. Crie a vari√°vel "encontrou" (flag) com valor incial -1
+3. Leia o valor da pesquisa (busca) digitado pelo usu√°rio.
 
-4. LÛgica de busca linear ou sequencial n„o ordenada:
- a. Percorra o vetor e verifique se o valor da pesquisa est· no vetor.
+4. L√≥gica de busca linear ou sequencial n√£o ordenada:
+ a. Percorra o vetor e verifique se o valor da pesquisa est√° no vetor.
  b. Se o valor da pesquisa for igual a um dos valores no vetor, armazene  
- 		o Ìndice e pare o for (valor encontrado).
- c. Ao tÈrmino da pesquisa no array, se n„o encontrar: 
- 		a vari·vel "encontrou" continua com o valor ñ1, indicando que o valor
-    buscado n„o existe no array.
+ 		o √≠ndice e pare o for (valor encontrado).
+ c. Ao t√©rmino da pesquisa no array, se n√£o encontrar: 
+ 		a vari√°vel "encontrou" continua com o valor ‚Äì1, indicando que o valor
+    buscado n√£o existe no array.
 5. No final, mostre uma das mensagens:
-   "Valor nao encontrado." ou "Valor encontrado na posicao (Ìndice) x."  */
+   "Valor nao encontrado." ou "Valor encontrado na posicao (√≠ndice) x."  */
 #include <stdio.h>    	// printf, scanf (biblioteca)
 int main(){     
     int qtd = 7;      	// Quantidade de valores no vetor.
     int vet[qtd] = {23, 4, 67, -8, 54, 90, 21};     						// 1. 
-    int encontrou = -1; // Flag, indica elemento n„o encontrado // 2.
-    int valorPesquisa, i; // Outras vari·veis
+    int encontrou = -1; // Flag, indica elemento n√£o encontrado // 2.
+    int valorPesquisa, i; // Outras vari√°veis
     printf("Valor da pesquisa (busca): ");          						// 3.
     scanf("%d", &valorPesquisa);
     for (i = 0; i < qtd; i++){                      						// 4a.
         if (valorPesquisa == vet[i]){ 													// 4b.
-            encontrou = i; // Elemento encontrado na posiÁ„o i
+            encontrou = i; // Elemento encontrado na posi√ß√£o i
         }   // Fim do if
     }       // Fim do for
     if (encontrou == -1)                            						// 4c.
         printf("\nValor nao encontrado.\n");										// 5.
     else
         printf("\nValor encontrado na posicao (indice) %d.\n", encontrou);
-} /* --- ALTERA«’ES:
-a. Mostre quantas repetiÁıes foram realizados na pesquisa, use contador.
+} /* --- ALTERA√á√ïES:
+a. Mostre quantas repeti√ß√µes foram realizados na pesquisa, use contador.
 b. Quando encontrar o valor pesquisado, como melhorar o algoritmo para
-   realizar menos repetiÁıes.
+   realizar menos repeti√ß√µes.
 c. No final, mostre todos os valores armazenados no vetor, na vertical.
 d. No final, mostre todos os valores armazenados no vetor, na horizontal.
 
@@ -51,7 +51,7 @@ d. No final, mostre todos os valores armazenados no vetor, na horizontal.
     // ...																												// b.
     for (i = 0; i < qtd; i++){                      		
         if (valorPesquisa == vet[i]){ 
-            encontrou = i; // Elemento encontrado na posiÁ„o i
+            encontrou = i; // Elemento encontrado na posi√ß√£o i
             break; // Sai do for quando encontra o elemento (otimiza) //b.
         }   // Fim do if
     }       // Fim do for
@@ -66,3 +66,49 @@ d. No final, mostre todos os valores armazenados no vetor, na horizontal.
 		    printf("%d\t", vet[i]);			//  \t	tab
 	  }
 */
+
+
+
+#include <stdio.h>
+
+int main(void) {
+    int vet[] = {23, 4, 67, -8, 54, 90, 21};
+    int qtd = 7;
+    int encontrou = -1;     // flag: -1 indica elemento nao encontrado
+    int valorPesquisa, i;
+    int repeticoes = 0;     // a. contador de repeticoes
+
+    printf("Valor da pesquisa (busca): ");
+    scanf("%d", &valorPesquisa);
+
+    for (i = 0; i < qtd; i++) {
+        repeticoes++;                     // a. conta cada volta do for
+
+        if (valorPesquisa == vet[i]) {
+            encontrou = i;
+            break;                        // b. para assim que encontra
+        }
+    }
+
+    if (encontrou == -1)
+        printf("\nValor nao encontrado.\n");
+    else
+        printf("\nValor encontrado na posicao (indice) %d.\n", encontrou);
+
+    printf("Repeticoes realizadas na pesquisa: %d\n", repeticoes);   // a.
+
+    // c. Vetor na vertical
+    printf("\n- Vetor na vertical:\n");
+    for (i = 0; i < qtd; i++) {
+        printf("%d\n", vet[i]);
+    }
+
+    // d. Vetor na horizontal
+    printf("\n- Vetor na horizontal:\n");
+    for (i = 0; i < qtd; i++) {
+        printf("%d ", vet[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
