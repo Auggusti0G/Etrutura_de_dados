@@ -102,3 +102,51 @@ void printArray(int v[], int n){	// Procedimento			// c.
 }
 
 */
+
+
+
+//--------------------------------------------------------------------------------------------
+//--------------------------------COM AUTERAÇÕES O CODIGO -------------------------------------
+//--------------------------------------------------------------------------------------------
+
+#include <stdio.h>                     // printf, scanf (biblioteca)
+
+// c. Procedimento para mostrar os valores do vetor
+void printArray(int v[], int n) {
+    int i;
+    for(i = 0; i < n; i++)
+        printf("%d  ", v[i]);
+    printf("\n");
+}
+
+int main(){
+    int size = 5;                      // 1. Tamanho do vetor
+    int vet[size] = {23, 4, 67, -8, 21};	
+    int i, j, aux;
+    int ct = 0;                        // a. Contador de comparações
+
+    printf("Valores desordenados na horizontal:\n"); 
+    // 2. Mostra vetor usando o procedimento criado (1ª chamada)
+    printArray(vet, size);
+
+    // b. Bubble Sort Otimizado (Fase 1: size - 1 - i)
+    for(i = 0; i < size - 1; i++) {		  // for externo 
+        for(j = 0; j < size - 1 - i; j++){  // for interno otimizado
+            ct++;                           // a. Incrementa o contador a cada comparação
+            if (vet[j] > vet[j + 1]){	// Posição j maior que posição j+1
+                aux = vet[j];					// Troca o valor de duas posições
+                vet[j] = vet[j + 1];
+                vet[j + 1] = aux;
+            }		// Fim do if
+        }				// Fim do for interno
+    }						// Fim do for externo
+
+    printf("\nValores ordenados na horizontal:\n");	
+    // 4. Mostra vetor ordenado usando o procedimento criado (2ª chamada)
+    printArray(vet, size);
+
+    // a. Exibe o total de comparações realizadas
+    printf("\nQuantidade de comparacoes: %d\n", ct);
+
+    return 0;
+}
