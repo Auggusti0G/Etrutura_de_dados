@@ -1,18 +1,45 @@
-/*               Coment·rios de v·rias linhas
-  CEUB  -  FATECS  -  ADS  -  ProgramaÁ„o  -  Prof. Barbosa
-- Estrutura de dados: ordenaÁ„o por ìbolhaî (Bubble Sort)
+/*               Coment√°rios de v√°rias linhas
+  CEUB  -  FATECS  -  ADS  -  Programa√ß√£o  -  Prof. Barbosa
+- Estrutura de dados: ordena√ß√£o por ‚Äúbolha‚Äù (Bubble Sort)
 
 - Implemente o Bubble Sort na ordem crescente:
 1. Crie um vetor com cinco valores desordenados: 23, 4, 67, -8, 21
 2. Mostre todos os valores do vetor com os dados desordenados na horizontal.
-3. Algoritmo Bubble Sort (LÛgica do Bubble Sort):
- a. Percorra o vetor v·rias vezes, use estrutura de repetiÁ„o aninhada.
- b. Verificar se o valor da posiÁ„o "j" È maior que o valor da posiÁ„o "j+1".
-   - Se verdade: troca o conte˙do das posiÁıes "j" e "j+1".
+3. Algoritmo Bubble Sort (L√≥gica do Bubble Sort):
+ a. Percorra o vetor v√°rias vezes, use estrutura de repeti√ß√£o aninhada.
+ b. Verificar se o valor da posi√ß√£o "j" √© maior que o valor da posi√ß√£o "j+1".
+   - Se verdade: troca o conte√∫do das posi√ß√µes "j" e "j+1".
  c. Ao final da passagem, o maior elemento "flutua" para o final do vetor.
- d. Repetida o processo atÈ n„o ter mais trocas ou atÈ que todas as
-   posiÁıes estejam ordenadas.
+ d. Repetida o processo at√© n√£o ter mais trocas ou at√© que todas as
+   posi√ß√µes estejam ordenadas.
 4. Mostre todos os valores do vetor com os dados ordenados.				*/
+
+//---------------------------------------------------------------------------
+//-----------------LOGICA DO BOUBLE SORCE TROCA DE VARIUAVEL ----------------
+//---------------------------------------------------------------------------
+
+
+#include <stdio.h>	               		// printf, scanf (bibliotecas)
+int main () {				              		// In√≠cio da fun√ß√£o main
+	int valor1, valor2, auxiliar;
+	printf("Valor 1: ");								// Entrada
+	scanf("%d", &valor1);
+	printf("Valor 2: ");
+	scanf("%d", &valor2);
+	auxiliar = valor1;									// Troca 
+	valor1 = valor2;
+	valor2 = auxiliar;
+	printf("\nValor 1 = %d ", valor1);	// Sa√≠da
+	printf("\nValor 2 = %d ", valor2);
+}
+
+
+//-----------------------------------------------------------------------------------
+
+
+
+
+//------------------------------------------------------------------------------------
 
 #include <stdio.h>                     // prinf, scanf (biblioteca)
 int main(){
@@ -26,8 +53,8 @@ int main(){
 
     for(i = 0; i < size-1; i++) {		  // for externo // 3. Bubble sort
         for(j = 0; j < size-1; j++){  // for interno
-            if (vet[j] > vet[j + 1]){	// PosiÁ„o j maior que posiÁ„o j+1 // 3b.
-                aux = vet[j];					// Troca o valor de duas posiÁıes
+            if (vet[j] > vet[j + 1]){	// Posi√ß√£o j maior que posi√ß√£o j+1 // 3b.
+                aux = vet[j];					// Troca o valor de duas posi√ß√µes
                 vet[j] = vet[j + 1];
                 vet[j + 1] = aux;
             }		// Fim do if
@@ -38,13 +65,13 @@ int main(){
     for (i = 0; i < size; i++) {
         printf("%d  ", vet[i]);
     }
-} /* --- ALTERA«’ES:
-a. Quantos teste (repetiÁıes) foram feitos dentro do for interno?
+} /* --- ALTERA√á√ïES:
+a. Quantos teste (repeti√ß√µes) foram feitos dentro do for interno?
    Quantidade de comparacoes: 16 (use contador)
 b. Melhore o algoritmo Bubble Sort para executar menos testes (fase 1)
 c. Crie um procedimento para mostrar os valores do vetor, ele recebe o
-endereÁo do vetor e o tamanho do vetor. O procedimento vai ser chamado
-duas vezes do programa principal (funÁ„o main).
+endere√ßo do vetor e o tamanho do vetor. O procedimento vai ser chamado
+duas vezes do programa principal (fun√ß√£o main).
 
 	--- DICAS:
     int ct = 0;								// Antes dos fors										// a.
